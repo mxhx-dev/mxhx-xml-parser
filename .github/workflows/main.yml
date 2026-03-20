@@ -10,10 +10,10 @@ jobs:
   haxelib:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/upload-artifact@v4
+      - uses: actions/checkout@v6
+      - uses: actions/upload-artifact@v7
         with:
-          name: mxhx-parser-haxelib
+          name: mxhx-xml-parser-haxelib
           path: |
             src/
             haxelib.json
@@ -25,37 +25,37 @@ jobs:
   api:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: krdlab/setup-haxe@v1
+      - uses: actions/checkout@v6
+      - uses: krdlab/setup-haxe@v2
         with:
-          haxe-version: 4.3.4
+          haxe-version: 4.3.7
       - name: Set up Haxelib dependencies
         run: |
           haxelib install dox --quiet
-          haxelib dev mxhx-parser ${{ github.workspace }}
+          haxelib dev mxhx-xml-parser ${{ github.workspace }}
       - name: Build API reference
         working-directory: docs
         run: haxe docs.hxml
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
-          name: mxhx-parser-docs
+          name: mxhx-xml-parser-docs
           path: bin/api/
           if-no-files-found: error
   tests:
     strategy:
       matrix:
-        haxe-version: [4.0.5, 4.1.5, 4.2.5, 4.3.4]
+        haxe-version: [4.0.5, 4.1.5, 4.2.5, 4.3.7]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: krdlab/setup-haxe@v1
+      - uses: actions/checkout@v6
+      - uses: krdlab/setup-haxe@v2
         with:
           haxe-version: ${{ matrix.haxe-version }}
       - uses: cedx/setup-hashlink@v3
       - name: Set up Haxelib dependencies
         run: |
           haxelib install utest --quiet
-          haxelib dev mxhx-parser ${{ github.workspace }}
+          haxelib dev mxhx-xml-parser ${{ github.workspace }}
       - name: Run Interpreter Tests
         working-directory: test
         run: haxe test.hxml --interp

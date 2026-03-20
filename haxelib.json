@@ -1,6 +1,6 @@
 {
-  "name": "mxhx-parser",
-  "url": "https://feathersui.com/",
+  "name": "mxhx-xml-parser",
+  "url": "https://mxhx.dev/",
   "license": "Apache",
   "tags": ["xml", "mxhx", "markup", "gui"],
   "description": "Repairing XML component parser for Haxe",

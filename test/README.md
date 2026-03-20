@@ -1,4 +1,4 @@
-# mxhx-parser tests
+# mxhx-xml-parser tests
 
 Automated tests created with [utest](https://lib.haxe.org/p/utest).
 

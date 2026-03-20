@@ -1,5 +1,5 @@
-# MXHX Parser Change Log
+# MXHX XML Parser Change Log
 
-## 1.0.0 (????-??-??)
+## 1.0.0 (2026-03-20)
 
 - Initial release
