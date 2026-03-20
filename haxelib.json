@@ -3,7 +3,7 @@
   "url": "https://mxhx.dev/",
   "license": "Apache",
   "tags": ["xml", "mxhx", "markup", "gui"],
-  "description": "Repairing XML component parser for Haxe",
+  "description": "XML parser for MXHX and other markup languages",
   "version": "1.0.0",
   "classPath": "src",
   "contributors": ["bowlerhat"],

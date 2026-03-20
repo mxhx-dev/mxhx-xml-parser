@@ -13,7 +13,7 @@ A separate library, such as [mxhx-component](https://github.com/mxhx-dev/mxhx-co
 This library is not yet available on Haxelib, so you'll need to install it from Github.
 
 ```sh
-haxelib git mxhx-xml-parser https://github.com/mxhx-dev/mxhx-xml-parser.git
+haxelib install mxhx-xml-parser
 ```
 
 ## Project Configuration
