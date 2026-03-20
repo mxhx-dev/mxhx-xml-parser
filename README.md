@@ -10,7 +10,9 @@ A separate library, such as [mxhx-component](https://github.com/mxhx-dev/mxhx-co
 
 ## Installation
 
-This library is not yet available on Haxelib, so you'll need to install it from Github.
+Install [Haxe](https://haxe.org/download/).
+
+Open a terminal, and then install the MXHX XML Parser library using the following command:
 
 ```sh
 haxelib install mxhx-xml-parser
